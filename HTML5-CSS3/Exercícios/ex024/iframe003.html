@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font: 1.1em normal Arial, Helvetica, sans-serif;
+        }
+        iframe {
+            width: 98vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quod dolorum, expedita reprehenderit saepe animi, magnam a labore ipsam eius consectetur, magni cupiditate ea numquam iure? Maxime, vitae placeat. Sunt?
+    </p>
+
+    <ul>
+        <li><a href="pags_extras/pg001.html" target="frame">Primeira Página</a></li>
+        <li><a href="pags_extras/pg002.html" target="frame">Segunda Página</a></li>
+        <li><a href="pags_extras/pg003.html" target="frame">Terceira Página</a></li>
+    </ul>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odio facere quaerat pariatur omnis culpa autem ab? Veritatis perferendis optio quaerat? Nobis, sunt minus libero magnam harum numquam ex ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sed optio magni soluta adipisci, consequatur repudiandae, architecto similique obcaecati, deleniti accusantium dicta officia voluptas itaque sequi suscipit rerum explicabo harum.
+    </p>
+
+    <iframe name="frame" 
+    srcdoc="
+    <h1>Escolha uma das opções acima</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ea molestiae perspiciatis ab magnam explicabo sunt ipsa dignissimos, sit quasi at sequi enim, dolore quibusdam commodi accusantium! Impedit, itaque rem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, reprehenderit odit rem ratione aut dicta vitae aliquid repellat necessitatibus id in dignissimos, omnis maxime cupiditate eveniet quod ea unde amet!
+    </p>
+    <img src='imagens/logo.png' alt='Logo do Curso em Vídeo'>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quis mollitia, repellat aliquid est, placeat unde molestiae et cumque atque, exercitationem eligendi quas recusandae fugiat molestias cupiditate adipisci expedita maxime.
+    </p>
+    " frameborder="0">
+    
+        <p>
+            Infelizmente seu navegador não é compatível...
+        </p>
+    </iframe>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos odio facere quaerat pariatur omnis culpa autem ab? Veritatis perferendis optio quaerat? Nobis, sunt minus libero magnam harum numquam ex ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sed optio magni soluta adipisci, consequatur repudiandae, architecto similique obcaecati, deleniti accusantium dicta officia voluptas itaque sequi suscipit rerum explicabo harum.
+    </p>
+</body>
+</html>

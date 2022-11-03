@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font: 1.5em Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .nome {
+            background-color: lightcoral;
+        }
+        .idade {
+            background-color: lightyellow;
+        }
+        .sexo {
+            background-color: lightgreen;
+        }
+        .profissao {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabelas</h1>
+    <table>
+        <colgroup>
+            <col class="nome">
+            <col class="idade">
+            <col class="sexo">
+            <col class="profissao">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>F</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>28</td>
+            <td>M</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>42</td>
+            <td>M</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>19</td>
+            <td>M</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>39</td>
+            <td>F</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>22</td>
+            <td>M</td>
+            <td>Nutricionista</td>
+        </tr>
+    </table>
+</body>
+</html>

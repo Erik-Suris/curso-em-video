@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+
+    section#login {
+        width: 80vw;
+        height: 300px;
+    }
+
+    section#login > div#img {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login > div#form {
+        float: right;
+        width: 70%;
+    }
+
+    div#form > h1 {
+        font-size: 1.4em;
+    }
+
+    div#form > p {
+        margin: 15px 0px;
+        font-size: 0.9em;
+        text-align: justify;
+    }
+
+    form input[type=submit] {
+        margin: auto;
+        width: 250px;
+    }
+
+    form a.button {
+        margin: auto;
+        margin-top: 5px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+    
+    section#login {
+        width: 80vw;
+        height: 330px;
+    }
+
+    section#login > div#img {
+        float: right;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#form {
+        float: left;
+        width: 50%;
+    }
+
+    div#form > h1 {
+        font-size: 1.4em;
+    }
+
+    div#form > p {
+        margin: 20px 0px;
+        font-size: 0.9em;
+        text-align: justify;
+    }
+
+    form input[type=submit] {
+        margin: auto;
+        width: 300px;
+    }
+
+    form a.button {
+        margin: auto;
+        margin-top: 5px;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+    
+    section#login {
+        width: 80vw;
+        height: 330px;
+    }
+
+    section#login > div#img {
+        float: right;
+        width: 50%;
+        height: 100%;
+        background-position: center center;
+    }
+
+    section#login > div#form {
+        float: left;
+        width: 50%;
+    }
+
+    div#form > h1 {
+        font-size: 1.8em;
+    }
+
+    div#form > p {
+        margin: 20px 0px;
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    form input[type=submit] {
+        margin: auto;
+        width: 300px;
+    }
+
+    form a.button {
+        margin: auto;
+        margin-top: 5px;
+        width: 300px;
+    }
+}

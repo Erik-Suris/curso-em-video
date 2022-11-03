@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        html, body {
+            font: normal 1.2em Arial, Helvetica, sans-serif;
+        }
+        input {
+            width: 150px;
+            height: 75px;
+
+            font: normal 20px Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <input type="button" value="Comprar" onclick="clicar()">
+    <script>
+        function clicar () {
+            var produto = window.prompt('Que produto você está comprando?')
+            var preco = Number(window.prompt(`Quanto custa o(a) ${produto} que você está comprando?`))
+            var pago = Number(window.prompt(`Qual foi o valor que você deu para pagar ${produto}`))
+            var preco_formatado = preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            var pago_formatado = pago.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            var troco = pago - preco
+            var troco_formatado = troco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+            window.alert(`Você comprou um(a) ${produto} que custou ${preco_formatado}, deu ${pago_formatado} em dinheiro e vai receber ${troco_formatado} de troco. Volte sempre!`)
+        }
+    </script>
+</body>
+</html>

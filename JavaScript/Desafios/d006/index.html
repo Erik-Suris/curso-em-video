@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        input {
+            width: 200px;
+            height: 100px;
+
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <input type="submit" value="Converter" onclick="clicar()">
+    <p id="cel">Clique no botão acima para iniciar.</p>
+    <div id="kel"></div>
+    <div id="fah"></div>
+    <script>
+        function clicar() {
+            var t_celsius = Number(prompt('Digite uma temperatura em °C (Celsius)'))
+            var t_kelvin = t_celsius + 273
+            var t_fahrenheit = (t_celsius * 9/5) + 32
+            var txt_cel = document.querySelector('p#cel')
+            var txt_kel = document.querySelector('div#kel')
+            var txt_fah = document.querySelector('div#fah')
+            txt_cel.innerHTML = `A temperatura de ${t_celsius}°C corresponde a...`
+            txt_cel.style.fontSize = '2em'
+            txt_cel.style.fontWeight = 'bold'
+            txt_kel.innerHTML = `<p>${t_kelvin}°K (Kelvin)</p>`
+            txt_fah.innerHTML = `<p>${t_fahrenheit}°F (Fahrenheit)</p>`
+        }
+    </script>
+</body>
+</html>

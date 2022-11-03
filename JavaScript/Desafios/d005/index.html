@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        html, body {
+            font: normal 1.2em Arial, Helvetica, sans-serif;
+        }
+        input {
+            width: 200px;
+            height: 75px;
+
+            font: normal 20px Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <input type="button" value="Converter" onclick="clicar()">
+    <p id="txt">Clique no botão acima para iniciar</p>
+    <div id="conv_km"></div>
+    <div id="conv_hm"></div>
+    <div id="conv_dam"></div>
+    <div id="conv_dm"></div>
+    <div id="conv_cm"></div>
+    <div id="conv_mm"></div>
+    <script>
+        function clicar () {
+            var dist = Number(window.prompt('Digite uma distância em metros (m)'))
+
+            var dist_km = dist*0.001
+            var dist_hm = dist*0.01
+            var dist_dam = dist*0.1
+            var dist_dm = dist*10
+            var dist_cm = dist*100
+            var dist_mm = dist*1000
+
+
+            var txt = window.document.getElementById('txt')
+            var conv_km = window.document.getElementById('conv_km')
+            var conv_hm = window.document.getElementById('conv_hm')
+            var conv_dam = window.document.getElementById('conv_dam')
+            var conv_dm = window.document.getElementById('conv_dm')
+            var conv_cm = window.document.getElementById('conv_cm')
+            var conv_mm = window.document.getElementById('conv_mm')
+
+            txt.innerHTML = `A distância de ${dist} metros corresponde a...`
+            txt.style.fontWeight = 'bold'
+            txt.style.fontSize = '1.2em'
+
+            conv_km.innerHTML = `<p>${dist_km} quilômetros (Km)</p>`
+            conv_hm.innerHTML = `<p>${dist_hm} hectômetros (Hm)</p>`
+            conv_dam.innerHTML = `<p>${dist_dam} decâmetros (Dam)</p>`
+            conv_dm.innerHTML = `<p>${dist_dm} decimetros (dm)</p>`
+            conv_cm.innerHTML = `<p>${dist_cm} centimetros (cm)</p>`
+            conv_mm.innerHTML = `<p>${dist_mm} milímetros (mm)</p>`
+        }
+    </script>
+</body>
+</html>
