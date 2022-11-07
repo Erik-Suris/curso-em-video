@@ -1,0 +1,15 @@
+/*
+console.log('Tudo bem?')
+console.log('Tudo bem?')
+console.log('Tudo bem?')
+console.log('Tudo bem?')
+console.log('Tudo bem?')
+console.log('Tudo bem?')
+*/
+
+var count = 0
+
+while (count < 1000000000) {
+    console.log('Tudo bem?')
+    count++
+}
