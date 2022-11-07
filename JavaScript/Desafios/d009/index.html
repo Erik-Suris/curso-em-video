@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        input {
+            width: 225px;
+            height: 100px;
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <input type="button" value="Reajustar Salário" onclick="reajustar()">
+    <p id="msg">
+        Clique no botão acima para iniciar
+    </p>
+    <p id="atual"></p>
+    <p id="aumento"></p>
+    <p id="reajustado"></p>
+    <script>
+        function reajustar() {
+            var nome = prompt('Qual é o nome do funcionário?')
+            var sal_pre = Number(prompt(`Qual é o salário de ${nome}?`))
+            while (isNaN(sal_pre)) {
+                alert('Atenção, não utilize caracteres especiais e troque a vírgula por ponto para números decimais!')
+                var sal_pre = Number(prompt(`Qual é o salário de ${nome}?`))
+            }
+            var taxa = (Number(prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`)))
+            var reajuste = sal_pre*(taxa/100)
+            var sal_pos = sal_pre + reajuste
+            sal_pre = sal_pre.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            reajuste = reajuste.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            sal_pos = sal_pos.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            var msg = document.getElementById('msg')
+            var atual = document.getElementById('atual')
+            var aumento = document.getElementById('aumento')
+            var reajustado = document.getElementById('reajustado')
+            msg.innerHTML = `${nome} recebeu um aumento salarial!`
+            atual.innerHTML = `O salário atual é de ${sal_pre}.`
+            aumento.innerHTML = `Com o aumento de ${taxa}%, o salário vai aumentar ${reajuste} no próximo mês.`
+            reajustado.innerHTML = `E a partir daí, ${nome} vai passar a ganhar ${sal_pos}.`
+        }
+    </script>
+</body>
+</html>
