@@ -11,18 +11,8 @@ console.log('Tudo bem?')
 console.log('Tudo bem?')
 */
 
-var count = 1
-
-// While
-
-while (count <= 10) {
+console.log('Vai começar...')
+for (var count = 1; count <= 10; count++) {
     console.log(`Passo ${count}`)
-    count++
 }
-
-// Do while
-
-do {
-    console.log(`Passo ${count}`)
-    count++
-} while (count <= 10)
+console.log('FIM!')
